@@ -1,0 +1,1445 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart' hide ModalBottomSheetRoute;
+import 'package:flutter/services.dart';
+import 'package:flutter_cached_pdfview/flutter_cached_pdfview.dart';
+import 'package:flutter_statusbarcolor_ns/flutter_statusbarcolor_ns.dart';
+import 'package:image_preview/image_preview.dart';
+//import 'package:mantled_app/component/StepComponent.dart';
+import 'package:mantled_app/constants/constants.dart';
+import 'package:country_code_picker/country_code_picker.dart';
+import 'package:mantled_app/model/AssetDocumentModel.dart';
+import 'package:mantled_app/model/CollabModel.dart';
+import 'package:mantled_app/model/assetDetailModel.dart';
+import 'package:mantled_app/model/complete_profile.dart';
+import 'package:image_cropper/image_cropper.dart';
+import 'package:image_picker/image_picker.dart';
+import 'package:mantled_app/model/editAssetModel.dart';
+import 'package:mantled_app/networking/rest_data.dart';
+import 'package:mantled_app/providers.dart';
+import 'package:mantled_app/screens/AssetScreens/MAAssetHomeScreen.dart';
+import 'package:mantled_app/screens/DashboardScreens/MADashboardScreen.dart';
+import 'package:mantled_app/screens/OnboardingScreens/MAMembershipScreen.dart';
+// import 'package:mantled_app/screen/MAMembershipScreen.dart';
+import 'package:mantled_app/utils/NBWidgets.dart';
+import 'package:nigerian_states_and_lga/nigerian_states_and_lga.dart';
+
+import 'dart:io';
+import 'package:image_picker/image_picker.dart';
+import 'package:intl/intl.dart';
+import 'package:intl_phone_field/intl_phone_field.dart';
+import 'package:modal_bottom_sheet/modal_bottom_sheet.dart' as bottomsheet;
+import 'package:nb_utils/nb_utils.dart';
+import 'package:mantled_app/utils/NBColors.dart';
+import 'package:mantled_app/utils/NBImages.dart';
+import 'package:path_provider/path_provider.dart';
+import 'package:file_picker/file_picker.dart';
+import 'package:flutter_overlay_loader/flutter_overlay_loader.dart' as loader;
+import 'package:country_list_pick/country_list_pick.dart';
+import 'package:provider/provider.dart';
+
+import '../../model/housing_property_model.dart';
+
+//import 'MADashboardScreen.dart';
+
+class MAEditAssetScreen extends StatefulWidget {
+  static String tag = '/MAEditAssetScreen';
+  final AssetDetailModel assetData;
+  final String assetID;
+  final String assetType;
+
+  const MAEditAssetScreen({Key? key, required this.assetID, required this.assetType, required this.assetData}) : super(key: key);
+
+  @override
+  MAEditAssetScreenState createState() => MAEditAssetScreenState();
+}
+
+class MAEditAssetScreenState extends State<MAEditAssetScreen> {
+  List<String> mPages = <String>[
+    brainstorming1,
+    financialdata1,
+    onlinetransactions1
+  ];
+
+  late EditAssetModel myDetail;
+  List<String> headings = <String>[heading1, heading2, heading3];
+  List<String> subHeadings = <String>[subheading1, subheading2, subheading3];
+  final _scaffoldMessengerKey = GlobalKey<ScaffoldMessengerState>();
+  final TextEditingController _dateController = TextEditingController();
+  String stateValue = NigerianStatesAndLGA.allStates[0];
+  List<String> deletedIDList=[];
+  String lgaValue = 'Select a Local Government Area';
+  String selectedLGAFromAllLGAs = NigerianStatesAndLGA.getAllNigerianLGAs()[0];
+  List<String> statesLga = [];
+  List<String?> maritalStatus = [
+    "------Marital Status------",
+    "Married",
+    "Single",
+    "Divorced",
+    "Widow",
+  ];
+  List<String?> nationalityList = [
+    "Document Type",
+    "Nigeria",
+    "South Africa",
+    "Israel",
+    "Egypt",
+  ];
+  List<String?> governmentIDList = [
+    "LGA",
+    "Driver's License",
+    "National ID",
+    "International Passport",
+  ];
+  String? _fileName2;
+  String? _saveAsFileName2;
+  List<PlatformFile>? _paths2;
+  String? _directoryPath2;
+  String? _extension2;
+  bool _isLoading2 = false;
+  bool _userAborted2 = false;
+  final bool _multiPick2 = true;
+
+  var allSteps = ["Naming", "Address", "Uploads"];
+
+  void _resetState2() {
+    if (!mounted) {
+      return;
+    }
+    setState(() {
+      _isLoading2 = true;
+      _directoryPath2 = null;
+      _fileName2 = null;
+      _paths2 = null;
+      _saveAsFileName2 = null;
+      _userAborted2 = false;
+    });
+  }
+
+  void _showEdit(BuildContext ctx, String assetID) {
+    showModalBottomSheet(
+        shape: RoundedRectangleBorder(
+          side: const BorderSide(color: Colors.white70, width: 1),
+          borderRadius: BorderRadius.circular(25),
+        ),
+        isScrollControlled: true,
+        elevation: 5,
+        context: ctx,
+        builder: (ctx) => Padding(
+          padding: EdgeInsets.only(
+              top: 25,
+              left: 25,
+              right: 25,
+              bottom: MediaQuery.of(ctx).viewInsets.bottom + 15),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Image.asset('assets/png/confetti-cone.png',fit: BoxFit.cover, width: 120,),
+              30.height,
+              Text(
+                'Asset has been edited Successfully ',
+                style: primaryTextStyle(color: black,size: 19),
+
+                textAlign: TextAlign.center,
+              ),
+              50.height,
+
+              Padding(
+                padding: const EdgeInsets.only(bottom: 28.0),
+                child: GestureDetector(
+                  onTap: () async {
+                    final prefs = await SharedPreferences.getInstance();
+                    String? fullName=prefs.getString('fullName');
+                    String? photo=prefs.getString('photo');
+                   MADashboardScreen(fullName: fullName, photo:photo).launch(context);
+                  },
+                  child: Container(
+                    alignment: Alignment.center,
+                    width: context.width()/1.52,
+                    height: 60,
+                    decoration:  BoxDecoration(
+                      borderRadius:  BorderRadius.circular(20.0),
+                      color: const Color(0xFF121936),
+                    ),
+                    child: const Text('Continue',
+                      style: TextStyle(
+                        fontWeight: FontWeight.normal,
+                        fontSize: 16,
+                        color: Color(0xffffffff),
+                        letterSpacing: -0.3858822937011719,
+                      ),),
+                  ),
+                ),
+              ),
+              16.height,
+            ],
+          ),
+        ));
+  }
+  void _show(BuildContext ctx) {
+    showModalBottomSheet(
+        shape: RoundedRectangleBorder(
+          side: const BorderSide(color: Colors.white70, width: 1),
+          borderRadius: BorderRadius.circular(25),
+        ),
+        isScrollControlled: true,
+        elevation: 5,
+        context: ctx,
+        builder: (ctx) => Padding(
+              padding: EdgeInsets.only(
+                  top: 25,
+                  left: 25,
+                  right: 25,
+                  bottom: MediaQuery.of(ctx).viewInsets.bottom + 15),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    'assets/png/confetti-cone.png',
+                    fit: BoxFit.cover,
+                    width: 120,
+                  ),
+                  30.height,
+                  Text(
+                    'Asset has been added to Real Estate Successfully ',
+                    style: primaryTextStyle(color: black, size: 19),
+                    textAlign: TextAlign.center,
+                  ),
+                  50.height,
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 28.0),
+                    child: GestureDetector(
+                      onTap: () {
+                        // const MARealEstateScreen().launch(context);
+                      },
+                      child: Container(
+                        alignment: Alignment.center,
+                        width: context.width() / 1.52,
+                        height: 60,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20.0),
+                          color: const Color(0xFF121936),
+                        ),
+                        child: const Text(
+                          'Continue',
+                          style: TextStyle(
+                            fontWeight: FontWeight.normal,
+                            fontSize: 16,
+                            color: Color(0xffffffff),
+                            letterSpacing: -0.3858822937011719,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  16.height,
+                ],
+              ),
+            ));
+  }
+
+  void _logException(String message) {
+    print(message);
+    _scaffoldMessengerKey.currentState?.hideCurrentSnackBar();
+    _scaffoldMessengerKey.currentState?.showSnackBar(
+      SnackBar(
+        content: Text(message),
+      ),
+    );
+  }
+
+  void _pickFiles2() async {
+    _resetState2();
+    try {
+      _directoryPath2 = null;
+      _paths2 = (await FilePicker.platform.pickFiles(
+        allowMultiple: _multiPick2,
+        onFileLoading: (FilePickerStatus status) => print(status),
+        type: FileType.custom,
+        allowedExtensions: ['pdf', 'doc'],
+      ))
+          ?.files;
+    } on PlatformException catch (e) {
+      _logException('Unsupported operation$e');
+    } catch (e) {
+      _logException(e.toString());
+    }
+    if (!mounted) return;
+    setState(() {
+      _isLoading2 = false;
+      _fileName2 =
+          _paths2 != null ? _paths2!.map((e) => e.name).toString() : '...';
+      _userAborted2 = _paths2 == null;
+    });
+  }
+
+  late String _setDate;
+  File? coverImage;
+  ImagePicker imagePicker = ImagePicker();
+  DateTime selectedDate = DateTime.now();
+  Future<void> _selectDate(BuildContext context) async {
+    final DateTime picked = (await showDatePicker(
+        context: context,
+        initialDate: selectedDate,
+        initialDatePickerMode: DatePickerMode.day,
+        firstDate: DateTime(2015),
+        lastDate: DateTime(2101)))!;
+
+    setState(() {
+      selectedDate = picked;
+      _dateController.text = DateFormat('dd-MM-yyyy').format(selectedDate);
+    });
+  }
+
+  Future<void> pickPhoto() async {
+    var photo = await imagePicker.pickImage(source: ImageSource.gallery);
+    print(photo!.path);
+    coverImage = File(photo.path);
+    final CroppedFile? cropImage = await ImageCropper().cropImage(
+      sourcePath: coverImage!.path,
+      maxHeight: 1080,
+      maxWidth: 1080,
+      aspectRatio: const CropAspectRatio(ratioX: 1, ratioY: 1),
+      //cropStyle: CropStyle.circle,
+      compressQuality: 70,
+      compressFormat: ImageCompressFormat.jpg,
+      uiSettings: [
+        AndroidUiSettings(
+          statusBarColor: NBPrimaryColor,
+          toolbarTitle: 'Crop Image',
+          toolbarColor: NBPrimaryColor,
+          cropGridStrokeWidth: 2,
+        ),
+        IOSUiSettings(rectX: 1, rectY: 1)
+      ],
+    );
+    setState(() {
+      coverImage = File(cropImage!.path);
+    });
+    print(await coverImage!.length() / 1024 / 1024);
+    print(await coverImage!.path);
+  }
+
+  TextEditingController addressLineOneController = TextEditingController();
+  TextEditingController propertyNameController = TextEditingController();
+  TextEditingController addressLineTwoController = TextEditingController();
+
+  String? maritalStatusValue;
+  String? nationalityValue;
+  String? governmentIDName;
+
+  int position = 0;
+  PageController? pageController;
+  int newPostion = 0;
+  //
+  // final _pages = <Widget>[
+  //   const StepOneComponent(),
+  //   const StepOneComponent(),
+  // ];
+
+  late Future assetDocuments;
+  late Future assetDetails;
+
+  @override
+  void initState() {
+    super.initState();
+    init();
+    print(widget.assetID);
+    Provider.of<Data>(context, listen: false)
+        .fetchAssetDocumentList(context, widget.assetID, widget.assetType);
+    assetDocuments = getAssetDocumentList();
+
+    Provider.of<Data>(context, listen: false)
+        .fetchAssetDetails(context, widget.assetID,  widget.assetType);
+    assetDetails = getAssetDetails();
+  }
+
+  Future getAssetDocumentList() async {
+    await Provider.of<Data>(context, listen: false).fetchAssetDocumentList(context, widget.assetID,  widget.assetType);
+    var c = Provider.of<Data>(context, listen: false).assetDocuments;
+    return c;
+  }
+
+  Future getAssetDetails() async {
+    await Provider.of<Data>(context, listen: false)
+        .fetchAssetDetails(context, widget.assetID, widget.assetType);
+    var c = Provider.of<Data>(context, listen: false).assetDetails;
+    return c;
+  }
+
+  Future<void> init() async {
+    pageController = PageController(initialPage: position, viewportFraction: 1);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    double customHeight = MediaQuery.of(context).size.height * 0.1;
+    setStatusBarColor(transparentColor,
+        statusBarIconBrightness: Brightness.dark);
+    return Scaffold(
+      extendBodyBehindAppBar: true,
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          child: Column(
+            children: [
+              SizedBox(
+                height: customHeight * 0.8,
+              ),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Image.asset("assets/png/material-arrow-back.png").onTap(() {
+                    finish(context);
+                  }),
+                  GestureDetector(
+                    onTap: () {
+                      initializeEditAsset();
+                    },
+                    child: Container(
+                      alignment: Alignment.center,
+                      height: 60,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(60.0),
+                        gradient: const LinearGradient(
+                          colors: [
+                            Color(0xFF7800F0),
+                            Color(0xFF00A088),
+                          ],
+                          begin: Alignment.centerLeft,
+                          end: Alignment.centerRight,
+                        ),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 18.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const Icon(
+                              Icons.edit_note,
+                              color: Colors.white,
+                              size: 28,
+                            ),
+                            10.width,
+                            const Text(
+                              'Save Changes',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w500,
+                                fontSize: 16,
+                                color: Colors.white,
+                                letterSpacing: -0.3858822937011719,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: customHeight * 0.3,
+              ),
+              Row(
+                children: [
+                  Text(
+                    'Edit Asset Info',
+                    style: primaryTextStyle(
+                        color: Colors.black, size: 25, weight: FontWeight.w500),
+                    textAlign: TextAlign.start,
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: customHeight * 0.1,
+              ),
+              Row(
+                children: [
+                  Text('STEP ',
+                      style: primaryTextStyle(color: Colors.black, size: 15)),
+                  Text('${position + 1} OF 3 ',
+                      style: primaryTextStyle(color: Colors.black, size: 15)),
+                  Text('- ${allSteps[position]}',
+                      style: boldTextStyle(color: NBPrimaryColor, size: 15)),
+                ],
+              ),
+              position == 2
+                  ? Column(
+                      children: [
+                        SizedBox(
+                          height: customHeight * 0.1,
+                        ),
+                        const Row(
+                          children: [
+                            Text(
+                              "(Format: pdf, png, jpeg only) 50mb Max",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.w500),
+                              textAlign: TextAlign.start,
+                            ),
+                          ],
+                        ),
+                      ],
+                    )
+                  : Container(),
+              SizedBox(
+                height: customHeight * 0.5,
+              ),
+              FutureBuilder(
+                  future: assetDetails,
+                  builder: (context, AsyncSnapshot snapshot) {
+                    if (snapshot.data == null) {
+                      return const Center(
+                        child: CupertinoActivityIndicator(),
+                      );
+                    }
+                    if (snapshot.connectionState == ConnectionState.waiting) {
+                      return const Center(
+                        child: CupertinoActivityIndicator(),
+                      );
+                    } else if (!snapshot.hasData) {
+                      return const Column(
+                        children: [
+                          Text(
+                            "No Beneficiaries",
+                            style: TextStyle(
+                              backgroundColor: Colors.white,
+                            ),
+                          ),
+                        ],
+                      );
+                    }
+                    EditAssetModel assetDetails = snapshot.data;
+                    myDetail=assetDetails;
+
+                    return SizedBox(
+                      height: context.height() * 0.53,
+                      child: PageView(
+                          physics: const NeverScrollableScrollPhysics(),
+                          controller: pageController,
+                          scrollDirection: Axis.horizontal,
+                          children: <Widget>[
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Column(
+                                children: [
+                                  8.height,
+                                  AppTextField(
+                                      textFieldType: TextFieldType.NAME,
+                                      controller: propertyNameController,
+                                      textStyle: primaryTextStyle(size: 15),
+                                      textInputAction: TextInputAction.next,
+                                      decoration: InputDecoration(
+                                        contentPadding: const EdgeInsets.only(
+                                            left: 16,
+                                            right: 16,
+                                            top: 28,
+                                            bottom: 28),
+                                        filled: true,
+                                        isDense: true,
+                                        labelText: "Property Name",
+                                        fillColor:
+                                            Colors.white.withOpacity(0.1),
+                                        hintText: assetDetails.assetName,
+                                        border: OutlineInputBorder(
+                                          borderRadius: const BorderRadius.all(
+                                              Radius.circular(12.0)),
+                                          borderSide: BorderSide(
+                                              color:
+                                                  Colors.grey.withOpacity(0.2),
+                                              width: 2), //border Color
+                                        ),
+                                        hintStyle: secondaryTextStyle(),
+                                        enabledBorder: OutlineInputBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(30.0),
+                                          borderSide: BorderSide(
+                                              color:
+                                                  Colors.grey.withOpacity(0.2),
+                                              width: 2),
+                                        ),
+                                        focusedBorder: OutlineInputBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(30.0),
+                                          borderSide: const BorderSide(
+                                              color: NBPrimaryColor, width: 2),
+                                        ),
+                                      )),
+                                ],
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: SingleChildScrollView(
+                                child: Column(
+                                  children: [
+                                    SizedBox(
+                                      height: customHeight * 0.1,
+                                    ),
+                                    AppTextField(
+                                        textFieldType: TextFieldType.NAME,
+                                        controller: addressLineOneController,
+                                        textStyle: primaryTextStyle(size: 15),
+                                        textInputAction: TextInputAction.next,
+                                        decoration: InputDecoration(
+                                          contentPadding: const EdgeInsets.only(
+                                              left: 16,
+                                              right: 16,
+                                              top: 28,
+                                              bottom: 28),
+                                          filled: true,
+                                          isDense: true,
+                                          labelText: 'Address Line 1',
+                                          fillColor:
+                                              Colors.white.withOpacity(0.1),
+                                          hintText: assetDetails.assetAddress1,
+                                          border: OutlineInputBorder(
+                                            borderRadius:
+                                                const BorderRadius.all(
+                                                    Radius.circular(12.0)),
+                                            borderSide: BorderSide(
+                                                color: Colors.grey
+                                                    .withOpacity(0.2),
+                                                width: 2), //border Color
+                                          ),
+                                          hintStyle: secondaryTextStyle(),
+                                          enabledBorder: OutlineInputBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(30.0),
+                                            borderSide: BorderSide(
+                                                color: Colors.grey
+                                                    .withOpacity(0.2),
+                                                width: 2),
+                                          ),
+                                          focusedBorder: OutlineInputBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(30.0),
+                                            borderSide: const BorderSide(
+                                                color: NBPrimaryColor,
+                                                width: 2),
+                                          ),
+                                        )),
+                                    25.height,
+                                    AppTextField(
+                                        textFieldType: TextFieldType.NAME,
+                                        controller: addressLineTwoController,
+                                        textStyle: primaryTextStyle(size: 15),
+                                        textInputAction: TextInputAction.next,
+                                        decoration: InputDecoration(
+                                          contentPadding: const EdgeInsets.only(
+                                              left: 16,
+                                              right: 16,
+                                              top: 28,
+                                              bottom: 28),
+                                          filled: true,
+                                          isDense: true,
+                                          labelText: 'Address Line 2',
+                                          fillColor:
+                                              Colors.white.withOpacity(0.1),
+                                          hintText: assetDetails.assetAddress2,
+                                          border: OutlineInputBorder(
+                                            borderRadius:
+                                                const BorderRadius.all(
+                                                    Radius.circular(12.0)),
+                                            borderSide: BorderSide(
+                                                color: Colors.grey
+                                                    .withOpacity(0.2),
+                                                width: 2), //border Color
+                                          ),
+                                          hintStyle: secondaryTextStyle(),
+                                          enabledBorder: OutlineInputBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(30.0),
+                                            borderSide: BorderSide(
+                                                color: Colors.grey
+                                                    .withOpacity(0.2),
+                                                width: 2),
+                                          ),
+                                          focusedBorder: OutlineInputBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(30.0),
+                                            borderSide: const BorderSide(
+                                                color: NBPrimaryColor,
+                                                width: 2),
+                                          ),
+                                        )),
+                                    10.height,
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Container(
+                                          width: MediaQuery.of(context)
+                                                  .size
+                                                  .width /
+                                              2.4,
+                                          padding: const EdgeInsets.symmetric(
+                                              vertical: 8, horizontal: 10),
+                                          margin:
+                                              const EdgeInsets.only(top: 10),
+                                          decoration: BoxDecoration(
+                                            color:
+                                                Colors.white.withOpacity(0.1),
+                                            borderRadius:
+                                                BorderRadius.circular(25),
+                                            border: Border.all(
+                                                color: grey.withOpacity(0.2),
+                                                width: 2),
+                                          ),
+                                          child: const Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceBetween,
+                                            children: [
+                                              Expanded(
+                                                child: CountryCodePicker(
+                                                  onChanged: print,
+                                                  alignLeft: true,
+
+                                                  // Initial selection and favorite can be one of code ('IT') OR dial_code('+39')
+                                                  initialSelection: 'NG',
+                                                  favorite: ['+234', 'NG'],
+                                                  // optional. Shows only country name and flag
+                                                  showCountryOnly: true,
+                                                  showFlag: false,
+
+                                                  // optional. Shows only country name and flag when popup is closed.
+                                                  showOnlyCountryWhenClosed:
+                                                      true,
+                                                  // optional. aligns the flag and the Text left
+                                                ),
+                                              ),
+                                              Icon(Icons.arrow_drop_down_sharp)
+                                            ],
+                                          ),
+                                        ),
+                                        Container(
+                                          margin:
+                                              const EdgeInsets.only(top: 15),
+                                          width: MediaQuery.of(context)
+                                                  .size
+                                                  .width /
+                                              2.4,
+                                          child: DropdownButtonFormField<
+                                                  String>(
+                                              key: const ValueKey('States'),
+                                              value: stateValue,
+                                              isExpanded: true,
+                                              decoration: nbInputDecoration(
+                                                  bgColor: Colors.white,
+                                                  padding: const EdgeInsets
+                                                          .symmetric(
+                                                      horizontal: 25,
+                                                      vertical: 25)),
+                                              hint: const Text(
+                                                  'Select a Nigerian state'),
+                                              items: NigerianStatesAndLGA
+                                                  .allStates
+                                                  .map<
+                                                          DropdownMenuItem<
+                                                              String>>(
+                                                      (String value) {
+                                                return DropdownMenuItem<String>(
+                                                  child: Text(value),
+                                                  value: value,
+                                                );
+                                              }).toList(),
+                                              onChanged: (val) {
+                                                lgaValue =
+                                                    'Select a Local Government Area';
+                                                statesLga.clear();
+                                                statesLga.add(lgaValue);
+                                                statesLga.addAll(
+                                                    NigerianStatesAndLGA
+                                                        .getStateLGAs(val!));
+                                                setState(() {
+                                                  stateValue = val;
+                                                });
+                                              }),
+                                        ),
+                                      ],
+                                    ),
+                                    15.height,
+                                    SizedBox(
+                                      child: DropdownButtonFormField<String>(
+                                          key: const ValueKey(
+                                              'Local governments'),
+                                          value: lgaValue,
+                                          isExpanded: true,
+                                          hint: const Text('Select a Lga'),
+                                          decoration: nbInputDecoration(
+                                              bgColor: Colors.white,
+                                              padding:
+                                                  const EdgeInsets.symmetric(
+                                                      horizontal: 25,
+                                                      vertical: 25)),
+                                          items: statesLga
+                                              .map<DropdownMenuItem<String>>(
+                                                  (String value) {
+                                            return DropdownMenuItem<String>(
+                                              child: Text(value),
+                                              value: value,
+                                            );
+                                          }).toList(),
+                                          onChanged: (val) {
+                                            setState(() {
+                                              lgaValue = val!;
+                                            });
+                                          }),
+                                    ),
+                                    20.height,
+                                    SizedBox(
+                                      height: customHeight * 0.3,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Column(
+                                children: [
+                                  SizedBox(
+                                    height: customHeight * 0.1,
+                                  ),
+
+                                  Container(
+                                    padding: const EdgeInsets.only(
+                                        left: 16, top: 5, bottom: 5),
+                                    decoration: BoxDecoration(
+                                      color: Colors.white.withOpacity(0.1),
+                                      borderRadius: BorderRadius.circular(25),
+                                      border: Border.all(
+                                          color: Colors.grey.withOpacity(0.2),
+                                          width: 2),
+                                    ),
+                                    child: GestureDetector(
+                                      onTap: () {
+                                        _paths2 != null
+                                            ? _resetState2()
+                                            : _pickFiles2();
+                                      },
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text(
+                                            _paths2 != null
+                                                ? 'Delete Document'
+                                                : "Add Document",
+                                            style: primaryTextStyle(),
+                                          ),
+                                          Padding(
+                                            padding: const EdgeInsets.all(5.0),
+                                            child: Container(
+                                              decoration:
+                                                  boxDecorationWithRoundedCorners(
+                                                backgroundColor:
+                                                    const Color(0xFFF5F0FF),
+                                                borderRadius:
+                                                    BorderRadius.circular(25),
+                                                border: Border.all(
+                                                    color: Colors.grey
+                                                        .withOpacity(0.2)),
+                                              ),
+                                              child: Padding(
+                                                padding:
+                                                    const EdgeInsets.symmetric(
+                                                        vertical: 15.0,
+                                                        horizontal: 15),
+                                                child: Icon(
+                                                  _paths2 != null
+                                                      ? Icons.delete
+                                                      : CupertinoIcons.photo,
+                                                  size: 20,
+                                                  color:
+                                                      const Color(0xFF700BE9),
+                                                ),
+                                              ),
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: _paths2 != null ? 120 : 0,
+                                    child: Builder(
+                                      builder: (BuildContext context) =>
+                                          _isLoading2
+                                              ? const Padding(
+                                                  padding: EdgeInsets.only(
+                                                      bottom: 0.0),
+                                                  child:
+                                                      CircularProgressIndicator(),
+                                                )
+                                              : _userAborted2
+                                                  ? Padding(
+                                                      padding:
+                                                          const EdgeInsets.only(
+                                                              bottom: 0.0),
+                                                      child: Text(
+                                                        'User has aborted the dialog',
+                                                        style: boldTextStyle(),
+                                                      ),
+                                                    )
+                                                  : _directoryPath2 != null
+                                                      ? ListTile(
+                                                          title: Text(
+                                                            'Directory path',
+                                                            style:
+                                                                boldTextStyle(),
+                                                          ),
+                                                          subtitle: Text(
+                                                              _directoryPath2!),
+                                                        )
+                                                      : _paths2 != null
+                                                          ? Container(
+                                                              padding:
+                                                                  const EdgeInsets
+                                                                          .only(
+                                                                      bottom:
+                                                                          0.0),
+                                                              height: 20,
+                                                              child: Scrollbar(
+                                                                  child: ListView
+                                                                      .separated(
+                                                                itemCount: _paths2 !=
+                                                                            null &&
+                                                                        _paths2!
+                                                                            .isNotEmpty
+                                                                    ? _paths2!
+                                                                        .length
+                                                                    : 1,
+                                                                itemBuilder:
+                                                                    (BuildContext
+                                                                            context,
+                                                                        int index) {
+                                                                  final bool
+                                                                      isMultiPath =
+                                                                      _paths2 !=
+                                                                              null &&
+                                                                          _paths2!
+                                                                              .isNotEmpty;
+                                                                  final String
+                                                                      name =
+                                                                      'File $index: ${isMultiPath ? _paths2!.map((e) => e.name).toList()[index] : _fileName2 ?? '...'}';
+                                                                  final path = kIsWeb
+                                                                      ? null
+                                                                      : _paths2!
+                                                                          .map((e) => e
+                                                                              .path)
+                                                                          .toList()[
+                                                                              index]
+                                                                          .toString();
+
+                                                                  return ListTile(
+                                                                    visualDensity: const VisualDensity(
+                                                                        horizontal:
+                                                                            0,
+                                                                        vertical:
+                                                                            -4),
+                                                                    title: Text(
+                                                                      name,
+                                                                    ),
+                                                                    leading:
+                                                                        Container(
+                                                                      decoration:
+                                                                          boxDecorationWithRoundedCorners(
+                                                                        backgroundColor: Colors
+                                                                            .green
+                                                                            .withOpacity(0.2),
+                                                                        borderRadius:
+                                                                            BorderRadius.circular(60),
+                                                                        border: Border.all(
+                                                                            color:
+                                                                                const Color(0xFFF5F0FF)),
+                                                                      ),
+                                                                      child:
+                                                                          const Padding(
+                                                                        padding:
+                                                                            EdgeInsets.all(8.0),
+                                                                        child:
+                                                                            Icon(
+                                                                          CupertinoIcons
+                                                                              .photo,
+                                                                          size:
+                                                                              18,
+                                                                          color:
+                                                                              Color(0xFF006C67),
+                                                                        ),
+                                                                      ),
+                                                                    ),
+                                                                    subtitle:
+                                                                        const Text(
+                                                                            "Identification Document"),
+                                                                  );
+                                                                },
+                                                                separatorBuilder:
+                                                                    (BuildContext
+                                                                                context,
+                                                                            int index) =>
+                                                                        const Divider(),
+                                                              )),
+                                                            )
+                                                          : _saveAsFileName2 !=
+                                                                  null
+                                                              ? ListTile(
+                                                                  title: const Text(
+                                                                      'Save file'),
+                                                                  subtitle: Text(
+                                                                      _saveAsFileName2!),
+                                                                )
+                                                              : const SizedBox(),
+                                    ),
+                                  ),
+                              FutureBuilder(
+                                  future: assetDocuments,
+                                  builder: (context, AsyncSnapshot snapshot) {
+                                    if (snapshot.data == null) {
+                                      return const Center(
+                                        child: CupertinoActivityIndicator(),
+                                      );
+                                    }
+                                    if (snapshot.connectionState == ConnectionState.waiting) {
+                                      return const Center(
+                                        child: CupertinoActivityIndicator(),
+                                      );
+                                    }
+                                    else if (!snapshot.hasData) {
+                                      return const Center(
+                                        child: Column(
+                                          mainAxisAlignment: MainAxisAlignment.center,
+                                          crossAxisAlignment: CrossAxisAlignment.center,
+                                          children: [
+                                            Text(
+                                              "No Assets",
+                                              style: TextStyle(
+                                                color: Colors.black,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      );
+                                    }
+                                    List<dynamic> assetList = snapshot.data;
+                                    if(assetList.isEmpty){
+                                      return const Center(
+                                        child: Column(
+                                          mainAxisAlignment: MainAxisAlignment.center,
+                                          crossAxisAlignment: CrossAxisAlignment.center,
+                                          children: [
+                                            Text(
+                                              "No Assets Added",
+                                              style: TextStyle(
+                                                color: Colors.black,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      );
+                                    }
+                                    return Expanded(
+                                      child: ListView.builder(
+                                        scrollDirection: Axis.vertical,
+                                        padding: const EdgeInsets.only(top: 0),
+                                        physics: const AlwaysScrollableScrollPhysics(),
+                                        itemCount: assetList.length,
+                                        shrinkWrap: true,
+                                        itemBuilder: (context, index) {
+                                          DateTime dt = DateTime.parse(widget.assetData.assetDateAdded!);
+                                          return GestureDetector(
+                                            onTap: () {
+
+                                            },
+                                            child: SizedBox(
+                                              width: MediaQuery
+                                                  .of(context)
+                                                  .size
+                                                  .width,
+
+                                              child: GestureDetector(
+                                                onTap: () {
+                                                  if (assetList[index]
+                                                      .toString()
+                                                      .contains("pdf")) {
+                                                    Navigator.push(
+                                                        context,
+                                                        MaterialPageRoute<
+                                                            dynamic>(
+                                                          builder: (_) =>
+                                                              PDFViewerFromUrl(
+                                                                url: assetList[index]
+                                                                    .toString(),
+                                                                pdfName: "Asset Document ${index +
+                                                                    1}",
+                                                              ),
+                                                        ));
+                                                  }
+                                                  else if (assetList[index]
+                                                      .toString()
+                                                      .contains("jpg") ||
+                                                      assetList[index]
+                                                          .toString()
+                                                          .contains("png")) {
+                                                    openImagesPage(Navigator.of(
+                                                        context),
+                                                      imgUrls: [
+                                                        assetList[index]
+                                                            .toString(),
+                                                        assetList[index]
+                                                            .toString()
+                                                      ],
+                                                    );
+                                                  }
+                                                },
+
+                                                child: ListTile(
+                                                    leading: CircleAvatar(
+                                                      child: Image.asset(
+                                                          "assets/png/document.png"),
+                                                    ),
+                                                    title: Text("Asset Document ${index +
+                                                        1}"
+                                                        .toString()),
+                                                    subtitle: Text(
+                                                        DateFormat("EEE, d MMM yyyy HH:mm:ss").format(dt)),
+                                                    trailing: GestureDetector(
+                                                        onTap: () {
+                                                          deletedIDList.add(
+                                                              assetList[index]
+                                                                  .toString());
+                                                          assetList
+                                                              .removeWhere((
+                                                              item) =>
+                                                          item.toString() ==
+                                                              assetList[index]
+                                                                  .toString());
+                                                          setState(() {
+
+                                                          });
+                                                        },
+                                                        child: const Icon(
+                                                          CupertinoIcons.delete,
+                                                          size: 18
+                                                          ,
+                                                          color: Colors.black,))
+
+                                                ),
+                                              ),
+                                            ),
+                                          );
+                                        }
+                                      ),
+                                    );
+                                  }
+                              ),
+                                  SizedBox(
+                                    height: customHeight * 0.2,
+                                  ),
+
+                                ],
+                              ),
+                            ),
+                          ]),
+                    );
+                  }),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  position > 0
+                      ? GestureDetector(
+                          onTap: () {
+                            print(position);
+                            setState(() {
+                              if (position > 0) {
+                                position--;
+                                pageController!.previousPage(
+                                    duration: const Duration(microseconds: 300),
+                                    curve: Curves.linear);
+                              } else {
+                                // initializeCompleteProfile();
+                              }
+                            });
+                          },
+                          child: const Padding(
+                            padding: EdgeInsets.all(25),
+                            child: DecoratedBox(
+                              decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: NBPrimaryColor),
+                              child: Padding(
+                                padding: EdgeInsets.all(25),
+                                child:
+                                    Icon(Icons.arrow_back, color: Colors.white),
+                              ),
+                            ),
+                          ),
+                        )
+                      : Container(),
+                  position >= 0 && position < 2
+                      ? GestureDetector(
+                          onTap: () {
+                            print(position);
+                            setState(() {
+                              if (position < 2) {
+                                position++;
+                                pageController!.nextPage(
+                                    duration: const Duration(microseconds: 300),
+                                    curve: Curves.linear);
+                              } else {
+                                //initializeCompleteProfile();
+                                const MAMembershipScreen().launch(context);
+                              }
+                            });
+                          },
+                          child: const Padding(
+                            padding: EdgeInsets.all(25),
+                            child: DecoratedBox(
+                              decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: NBPrimaryColor),
+                              child: Padding(
+                                padding: EdgeInsets.all(25),
+                                child: Icon(Icons.arrow_forward,
+                                    color: Colors.white),
+                              ),
+                            ),
+                          ),
+                        )
+                      : Container(),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  initializeEditAsset() async {
+    loader.Loader.show(context,progressIndicator:const CupertinoActivityIndicator());
+    var apiCall = RestDataSource();
+    final prefs = await SharedPreferences.getInstance();
+
+    var assetData = AssetModel();
+    assetData.propTitle = propertyNameController.text.isNotEmpty?
+    propertyNameController.text : myDetail.assetName;
+    assetData.propAddressOne = addressLineOneController.text.isNotEmpty?
+    addressLineOneController.text : myDetail.assetAddress1;
+    assetData.propAddressTwo = addressLineTwoController.text.isNotEmpty?
+    addressLineTwoController.text : myDetail.assetAddress2;
+    assetData.assetType = widget.assetType;
+    assetData.stateName = stateValue.toString()!=NigerianStatesAndLGA.allStates[0]?
+    stateValue.toString() : myDetail.state;
+    assetData.localGov = lgaValue.toString()!="Select a Local Government Area"?
+    lgaValue.toString() : myDetail.lga;
+    assetData.countryName=nationalityValue;
+
+      await apiCall.editAsset(assetData, widget.assetID)
+          .then((value) {
+        Fluttertoast.showToast(
+          msg: "Asset Edited Successfully",
+          toastLength: Toast.LENGTH_SHORT,
+          gravity: ToastGravity.CENTER,
+          timeInSecForIosWeb: 1,
+          backgroundColor: Colors.green,
+          textColor: Colors.white,
+          fontSize: 16.0,
+        );
+
+        if(_paths2!=null){
+          apiCall.editUploadedDocuments(_paths2!, widget.assetID).then((value) {
+            print("it didnt work");
+            if(value.toString().contains("Error")){
+              Fluttertoast.showToast(
+                msg: "There was an error",
+                toastLength: Toast.LENGTH_SHORT,
+                gravity: ToastGravity.CENTER,
+                timeInSecForIosWeb: 1,
+                backgroundColor: Colors.red,
+                textColor: Colors.white,
+                fontSize: 16.0,
+              );
+              loader.Loader.hide();
+            }
+            else{
+              Fluttertoast.showToast(
+                msg: "Success",
+                toastLength: Toast.LENGTH_SHORT,
+                gravity: ToastGravity.CENTER,
+                timeInSecForIosWeb: 1,
+                backgroundColor: Colors.green,
+                textColor: Colors.white,
+                fontSize: 16.0,
+              );
+              loader.Loader.hide();
+              apiCall.deleteDocuments(deletedIDList,  widget.assetID).then((value) {
+                print(value);
+                if(value.toString().contains("Error")){
+                  Fluttertoast.showToast(
+                    msg: "There was an error",
+                    toastLength: Toast.LENGTH_SHORT,
+                    gravity: ToastGravity.CENTER,
+                    timeInSecForIosWeb: 1,
+                    backgroundColor: Colors.red,
+                    textColor: Colors.white,
+                    fontSize: 16.0,
+                  );
+                  loader.Loader.hide();
+                }
+                else{
+                  Fluttertoast.showToast(
+                    msg: "Success",
+                    toastLength: Toast.LENGTH_SHORT,
+                    gravity: ToastGravity.CENTER,
+                    timeInSecForIosWeb: 1,
+                    backgroundColor: Colors.green,
+                    textColor: Colors.white,
+                    fontSize: 16.0,
+                  );
+                  loader.Loader.hide();
+                  _showEdit(context, widget.assetID);
+                }
+
+              }).catchError((err) {
+                loader.Loader.hide();
+
+                Fluttertoast.showToast(
+                  msg: err,
+                  toastLength: Toast.LENGTH_SHORT,
+                  gravity: ToastGravity.CENTER,
+                  timeInSecForIosWeb: 1,
+                  backgroundColor: Colors.red,
+                  textColor: Colors.white,
+                  fontSize: 16.0,
+                );
+                print('Request not Sent');
+              });
+            }
+          }).catchError((err) {
+            loader.Loader.hide();
+
+            Fluttertoast.showToast(
+              msg: err,
+              toastLength: Toast.LENGTH_SHORT,
+              gravity: ToastGravity.CENTER,
+              timeInSecForIosWeb: 1,
+              backgroundColor: Colors.red,
+              textColor: Colors.white,
+              fontSize: 16.0,
+            );
+            print('Request not Sent');
+          });
+        }
+        else{
+          apiCall.deleteDocuments(deletedIDList,  widget.assetID).then((value) {
+            print(value);
+            if(value.toString().contains("Error")){
+              Fluttertoast.showToast(
+                msg: "There was an error",
+                toastLength: Toast.LENGTH_SHORT,
+                gravity: ToastGravity.CENTER,
+                timeInSecForIosWeb: 1,
+                backgroundColor: Colors.red,
+                textColor: Colors.white,
+                fontSize: 16.0,
+              );
+              loader.Loader.hide();
+            }
+            else{
+              Fluttertoast.showToast(
+                msg: "Success",
+                toastLength: Toast.LENGTH_SHORT,
+                gravity: ToastGravity.CENTER,
+                timeInSecForIosWeb: 1,
+                backgroundColor: Colors.green,
+                textColor: Colors.white,
+                fontSize: 16.0,
+              );
+              loader.Loader.hide();
+              _showEdit(context, widget.assetID);
+            }
+
+          }).catchError((err) {
+            loader.Loader.hide();
+
+            Fluttertoast.showToast(
+              msg: err,
+              toastLength: Toast.LENGTH_SHORT,
+              gravity: ToastGravity.CENTER,
+              timeInSecForIosWeb: 1,
+              backgroundColor: Colors.red,
+              textColor: Colors.white,
+              fontSize: 16.0,
+            );
+            print('Request not Sent');
+          });
+        }
+
+      }).catchError((err) {
+        loader.Loader.hide();
+        Fluttertoast.showToast(
+          msg: err,
+          toastLength: Toast.LENGTH_SHORT,
+          gravity: ToastGravity.CENTER,
+          timeInSecForIosWeb: 1,
+          backgroundColor: Colors.red,
+          textColor: Colors.white,
+          fontSize: 16.0,
+        );
+        print('Request not Sent');
+      });
+    }
+
+  }
+
+
+
+
+class PDFViewerFromUrl extends StatelessWidget {
+  const PDFViewerFromUrl({Key? key, required this.url, required this.pdfName}) : super(key: key);
+
+  final String url;
+  final String pdfName;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title:  Text(pdfName, style: TextStyle(fontSize: 16),),
+      ),
+      body: const PDF().fromUrl(
+        url,
+        placeholder: (double progress) => Center(child: Text('$progress %')),
+        errorWidget: (dynamic error) => Center(child: Text(error.toString())),
+      ),
+    );
+  }
+}
+
+class PDFViewerCachedFromUrl extends StatelessWidget {
+  const PDFViewerCachedFromUrl({Key? key, required this.url}) : super(key: key);
+
+  final String url;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Cached PDF From Url'),
+      ),
+      body: const PDF().cachedFromUrl(
+        url,
+        placeholder: (double progress) => Center(child: Text('$progress %')),
+        errorWidget: (dynamic error) => Center(child: Text(error.toString())),
+      ),
+    );
+  }
+}
+
+
+

@@ -1,0 +1,534 @@
+-- Merging decision tree log ---
+application
+INJECTED from /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/android/app/src/main/AndroidManifest.xml:9:5-56:19
+MERGED from [:esys_flutter_share_plus] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/esys_flutter_share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-19:19
+MERGED from [:esys_flutter_share_plus] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/esys_flutter_share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-19:19
+MERGED from [:cloud_firestore] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-15:19
+MERGED from [:cloud_firestore] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-15:19
+MERGED from [:firebase_core] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-15:19
+MERGED from [:firebase_core] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-15:19
+MERGED from [:image_picker_android] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-19:19
+MERGED from [:image_picker_android] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-19:19
+MERGED from [com.google.firebase:firebase-firestore:24.6.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/8c221e6f8fe94c9fa5b0461e54871fa6/transformed/jetified-firebase-firestore-24.6.0/AndroidManifest.xml:15:5-23:19
+MERGED from [com.google.firebase:firebase-firestore:24.6.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/8c221e6f8fe94c9fa5b0461e54871fa6/transformed/jetified-firebase-firestore-24.6.0/AndroidManifest.xml:15:5-23:19
+MERGED from [com.google.firebase:firebase-common:20.3.2] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/4ed067ba1f0f89a429ce10a8bfdae990/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:24:5-37:19
+MERGED from [com.google.firebase:firebase-common:20.3.2] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/4ed067ba1f0f89a429ce10a8bfdae990/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:24:5-37:19
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/8c6d5483ed39452a5b35b2e7a26c61f1/transformed/jetified-firebase-appcheck-interop-17.0.0/AndroidManifest.xml:23:5-20
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/8c6d5483ed39452a5b35b2e7a26c61f1/transformed/jetified-firebase-appcheck-interop-17.0.0/AndroidManifest.xml:23:5-20
+MERGED from [com.google.android.gms:play-services-base:18.0.1] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/b121b3b78989ee63d33a65614e3f7adb/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-base:18.0.1] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/b121b3b78989ee63d33a65614e3f7adb/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/0277debef067408d155f52616ad46187/transformed/jetified-firebase-auth-interop-19.0.2/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/0277debef067408d155f52616ad46187/transformed/jetified-firebase-auth-interop-19.0.2/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/452dcf75c9f46c1837c8390b3cfc1761/transformed/jetified-play-services-tasks-18.0.2/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/452dcf75c9f46c1837c8390b3cfc1761/transformed/jetified-play-services-tasks-18.0.2/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/3794f8805813d716e1232c1d56f0ad65/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:20:5-24:19
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/3794f8805813d716e1232c1d56f0ad65/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:20:5-24:19
+MERGED from [androidx.window:window:1.0.0-beta04] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/30c9f9e36f76ec2d5a473df3d33e33ff/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:24:5-31:19
+MERGED from [androidx.window:window:1.0.0-beta04] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/30c9f9e36f76ec2d5a473df3d33e33ff/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:24:5-31:19
+MERGED from [androidx.emoji2:emoji2:1.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/80dd5bf4a75f42de0f8e68bad5404641/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.emoji2:emoji2:1.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/80dd5bf4a75f42de0f8e68bad5404641/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.core:core:1.9.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/7001a38355e8d7c4e616e2867b2af33b/transformed/core-1.9.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.9.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/7001a38355e8d7c4e616e2867b2af33b/transformed/core-1.9.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/0bfe380b08b1e13327d8e12187576d5b/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/0bfe380b08b1e13327d8e12187576d5b/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.startup:startup-runtime:1.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/b2e16791d24d74ea89e5ecdee617d321/transformed/jetified-startup-runtime-1.0.0/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/b2e16791d24d74ea89e5ecdee617d321/transformed/jetified-startup-runtime-1.0.0/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/42eac6b9d57bafd2f3ce2b9ae42613bd/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/42eac6b9d57bafd2f3ce2b9ae42613bd/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.9.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/7001a38355e8d7c4e616e2867b2af33b/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
+	android:name
+		INJECTED from /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/android/app/src/main/AndroidManifest.xml
+manifest
+ADDED from /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/android/app/src/main/AndroidManifest.xml:1:1-57:12
+INJECTED from /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/android/app/src/main/AndroidManifest.xml:1:1-57:12
+INJECTED from /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/android/app/src/main/AndroidManifest.xml:1:1-57:12
+INJECTED from /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/android/app/src/main/AndroidManifest.xml:1:1-57:12
+MERGED from /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/android/app/src/main/AndroidManifest.xml:1:1-57:12
+MERGED from [:esys_flutter_share_plus] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/esys_flutter_share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-21:12
+MERGED from [:cloud_firestore] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-17:12
+MERGED from [:firebase_core] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-17:12
+MERGED from [:flutter_pdfview] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/flutter_pdfview/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:nb_utils] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/nb_utils/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-12:12
+MERGED from [:file_picker] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-19:12
+MERGED from [:camera_android] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/camera_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-12:12
+MERGED from [:image_picker_android] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-21:12
+MERGED from [:flutter_plugin_android_lifecycle] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/flutter_plugin_android_lifecycle/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:sqflite] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/sqflite/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:path_provider_android] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/path_provider_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:connectivity_plus] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/connectivity_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:image_cropper] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/image_cropper/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:shared_preferences_android] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/shared_preferences_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:flutter_statusbarcolor_ns] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/flutter_statusbarcolor_ns/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:flutter_keyboard_visibility] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/flutter_keyboard_visibility/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:fluttertoast] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/fluttertoast/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:video_player_android] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/video_player_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.multidex:multidex:2.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/a42b190f253fcb6b55178c6ea18082a1/transformed/multidex-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.yalantis:ucrop:2.2.8] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/4d7857c5bc5f6d520d6863d8de49ba07/transformed/jetified-ucrop-2.2.8/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.appcompat:appcompat:1.4.2] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/798ca3d8766dd71202e7a1bf4d91269a/transformed/appcompat-1.4.2/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0-beta01] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/ea6243c942a86bc59f4f588a556e01e7/transformed/legacy-support-v4-1.0.0-beta01/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.firebase:firebase-firestore:24.6.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/8c221e6f8fe94c9fa5b0461e54871fa6/transformed/jetified-firebase-firestore-24.6.0/AndroidManifest.xml:2:1-25:12
+MERGED from [com.google.firebase:firebase-common:20.3.2] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/4ed067ba1f0f89a429ce10a8bfdae990/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:15:1-39:12
+MERGED from [com.google.firebase:firebase-database-collection:18.0.1] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/a12b4d78dc7fd60bc61345803c6c2bd8/transformed/jetified-firebase-database-collection-18.0.1/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/8c6d5483ed39452a5b35b2e7a26c61f1/transformed/jetified-firebase-appcheck-interop-17.0.0/AndroidManifest.xml:15:1-25:12
+MERGED from [com.google.android.gms:play-services-base:18.0.1] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/b121b3b78989ee63d33a65614e3f7adb/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:16:1-24:12
+MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/0277debef067408d155f52616ad46187/transformed/jetified-firebase-auth-interop-19.0.2/AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/452dcf75c9f46c1837c8390b3cfc1761/transformed/jetified-play-services-tasks-18.0.2/AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/3794f8805813d716e1232c1d56f0ad65/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:16:1-26:12
+MERGED from [androidx.fragment:fragment:1.3.6] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/aa9c93bacb971c617b6598a795242b27/transformed/fragment-1.3.6/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.6.1] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/50647d89fd88e37c6406c26571a83ae6/transformed/jetified-activity-1.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0-beta01] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/c3980d4bede66213941b13d72968e233/transformed/legacy-support-core-ui-1.0.0-beta01/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0-beta01] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/92ec697cd2a0501fb96493cf00065580/transformed/legacy-support-core-utils-1.0.0-beta01/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/d401f0afd25f69cdbc6461146521fe05/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/7184b0f7277daadef7e7f6b04d4012a5/transformed/lifecycle-viewmodel-2.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/5da76385fefdc409a5576dc5fe151b37/transformed/jetified-lifecycle-viewmodel-savedstate-2.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.window:window-java:1.0.0-beta04] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/5f7f04b14475a5177c81c0aebd35a1c0/transformed/jetified-window-java-1.0.0-beta04/AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.window:window:1.0.0-beta04] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/30c9f9e36f76ec2d5a473df3d33e33ff/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:17:1-33:12
+MERGED from [com.github.mhiew:android-pdf-viewer:3.2.0-beta.3] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/5537a970aab7de17121104c2549a167e/transformed/jetified-android-pdf-viewer-3.2.0-beta.3/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.exoplayer:exoplayer-hls:2.18.5] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/06862db426c635872387effeeb4fb095/transformed/jetified-exoplayer-hls-2.18.5/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-dash:2.18.5] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/c193c1446d6754c1ac1548564cbe0a53/transformed/jetified-exoplayer-dash-2.18.5/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.18.5] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/518d41c3e849144d9970f2d91bcaaf86/transformed/jetified-exoplayer-smoothstreaming-2.18.5/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.18.5] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/c3355569f9522d6c716994335cfc544f/transformed/jetified-exoplayer-core-2.18.5/AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.media:media:1.0.0-beta01] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/eb8271bc910e9fa134369772253ef33f/transformed/media-1.0.0-beta01/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat-resources:1.4.2] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/8df05fd50cb56f937d4fc2ffd4303c98/transformed/jetified-appcompat-resources-1.4.2/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/06be450459b46321496021199dd5ad57/transformed/drawerlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/c77a6767f32c21999e0f1db5d45a62dd/transformed/jetified-emoji2-views-helper-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.emoji2:emoji2:1.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/80dd5bf4a75f42de0f8e68bad5404641/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:17:1-37:12
+MERGED from [androidx.transition:transition:1.4.1] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/7a4436c2eed48b4436a3442c2ff30468/transformed/transition-1.4.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0-beta01] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/40c3690db9d4ea94316edb6656612a67/transformed/coordinatorlayout-1.0.0-beta01/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0-beta01] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/de743e3d1fb9719e07f3fc6096f4ef79/transformed/slidingpanelayout-1.0.0-beta01/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0-beta01] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/ab2811db345d38056480b8c04c73aa79/transformed/swiperefreshlayout-1.0.0-beta01/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0-beta01] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/01641d303b6302f70cd7eac2f34cf3e3/transformed/asynclayoutinflater-1.0.0-beta01/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/ee2b9ab1f1c40582c045cd909c640590/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/0f7090bb1c901a5eef83eb957c740e78/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/87784eb0dfe09c8e2b1282bc3f1e0570/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/53c684651fc0a1d0d023d20a1835d031/transformed/customview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core-ktx:1.9.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/8c31325a10f05b1b0bc6756758cc1a60/transformed/jetified-core-ktx-1.9.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.core:core:1.9.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/7001a38355e8d7c4e616e2867b2af33b/transformed/core-1.9.0/AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.exifinterface:exifinterface:1.3.6] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/521e570cc145af3267b1defcb403065d/transformed/exifinterface-1.3.6/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/0bfe380b08b1e13327d8e12187576d5b/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:17:1-37:12
+MERGED from [androidx.startup:startup-runtime:1.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/b2e16791d24d74ea89e5ecdee617d321/transformed/jetified-startup-runtime-1.0.0/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/9be0c9b54cbfdf64fd75e017909965b4/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/d051f688b983c2a4e23be15260087246/transformed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/42eac6b9d57bafd2f3ce2b9ae42613bd/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/009c99516b19854d172865adc8513053/transformed/lifecycle-runtime-2.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.2.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/76139bbe915670c0795cc1dac7ff1c01/transformed/jetified-savedstate-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-datasource:2.18.5] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/b44cdfc0b199ceaf942166b6b6775c56/transformed/jetified-exoplayer-datasource-2.18.5/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-extractor:2.18.5] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/890ff937fe9e1edda61540d00c01aab7/transformed/jetified-exoplayer-extractor-2.18.5/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-decoder:2.18.5] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/9ac5569735acd4ac583c29c2f4e50ba1/transformed/jetified-exoplayer-decoder-2.18.5/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-database:2.18.5] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/6eaf3fe7270ddc107e39996da16f82fc/transformed/jetified-exoplayer-database-2.18.5/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-common:2.18.5] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/51aa59fb95afabea52e33080bfc18e07/transformed/jetified-exoplayer-common-2.18.5/AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.documentfile:documentfile:1.0.0-beta01] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/dbd50dd46d0b3c25cc7454aa0f5f5b9a/transformed/documentfile-1.0.0-beta01/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0-beta01] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/274fcb529e428a6ac3428247865ba82c/transformed/localbroadcastmanager-1.0.0-beta01/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0-beta01] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/5b0b870e15c9f63a2f4501855c9a7318/transformed/print-1.0.0-beta01/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.firebase:firebase-components:17.1.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/f6319cb97734e64285d3e7ca998d32b1/transformed/jetified-firebase-components-17.1.0/AndroidManifest.xml:15:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/cbb56f646a99c729e86f9d9894a77976/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/07658b4ab0772e1f50646dd1e3b2a065/transformed/lifecycle-livedata-core-2.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/fac1dcc8f45b013d55ffca72b5e78353/transformed/core-runtime-2.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/fbbb5f87ccc60943a50278ed5357805b/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/9553e73ac8992516b9e1aada05a60e32/transformed/jetified-annotation-experimental-1.3.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.mhiew:pdfium-android:1.9.2] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/baf0ab76bcf6da60ad22e1154f2a17f9/transformed/jetified-pdfium-android-1.9.2/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/76ff9de4fed6b4fe4dc131349478467f/transformed/jetified-protolite-well-known-types-18.0.0/AndroidManifest.xml:2:1-11:12
+MERGED from [io.grpc:grpc-android:1.52.1] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/c95a58f79df4312391491f6c1dcb89a5/transformed/jetified-grpc-android-1.52.1/AndroidManifest.xml:2:1-11:12
+INJECTED from /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/android/app/src/debug/AndroidManifest.xml:1:1-7:12
+INJECTED from /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/android/app/src/debug/AndroidManifest.xml:1:1-7:12
+INJECTED from /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/android/app/src/debug/AndroidManifest.xml:1:1-7:12
+	package
+		ADDED from /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/android/app/src/main/AndroidManifest.xml:2:9-42
+		INJECTED from /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/android/app/src/main/AndroidManifest.xml:2:9-42
+		INJECTED from /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/android/app/src/debug/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/android/app/src/main/AndroidManifest.xml:1:1-57:12
+		INJECTED from /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/android/app/src/debug/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/android/app/src/main/AndroidManifest.xml:1:1-57:12
+		INJECTED from /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/android/app/src/debug/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/android/app/src/main/AndroidManifest.xml:1:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/android/app/src/main/AndroidManifest.xml:4:9-71
+MERGED from /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/android/app/src/main/AndroidManifest.xml:4:9-71
+MERGED from /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/android/app/src/main/AndroidManifest.xml:4:9-71
+MERGED from [:nb_utils] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/nb_utils/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-67
+MERGED from [:nb_utils] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/nb_utils/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-67
+MERGED from [com.google.firebase:firebase-firestore:24.6.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/8c221e6f8fe94c9fa5b0461e54871fa6/transformed/jetified-firebase-firestore-24.6.0/AndroidManifest.xml:13:5-67
+MERGED from [com.google.firebase:firebase-firestore:24.6.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/8c221e6f8fe94c9fa5b0461e54871fa6/transformed/jetified-firebase-firestore-24.6.0/AndroidManifest.xml:13:5-67
+	android:name
+		ADDED from /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/android/app/src/main/AndroidManifest.xml:4:26-68
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/android/app/src/main/AndroidManifest.xml:5:9-83
+MERGED from [:nb_utils] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/nb_utils/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-79
+MERGED from [:nb_utils] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/nb_utils/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-79
+MERGED from [:connectivity_plus] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/connectivity_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-79
+MERGED from [:connectivity_plus] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/connectivity_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-79
+MERGED from [com.google.firebase:firebase-firestore:24.6.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/8c221e6f8fe94c9fa5b0461e54871fa6/transformed/jetified-firebase-firestore-24.6.0/AndroidManifest.xml:12:5-79
+MERGED from [com.google.firebase:firebase-firestore:24.6.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/8c221e6f8fe94c9fa5b0461e54871fa6/transformed/jetified-firebase-firestore-24.6.0/AndroidManifest.xml:12:5-79
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.18.5] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/c3355569f9522d6c716994335cfc544f/transformed/jetified-exoplayer-core-2.18.5/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.18.5] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/c3355569f9522d6c716994335cfc544f/transformed/jetified-exoplayer-core-2.18.5/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.exoplayer:exoplayer-common:2.18.5] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/51aa59fb95afabea52e33080bfc18e07/transformed/jetified-exoplayer-common-2.18.5/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.exoplayer:exoplayer-common:2.18.5] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/51aa59fb95afabea52e33080bfc18e07/transformed/jetified-exoplayer-common-2.18.5/AndroidManifest.xml:24:5-79
+MERGED from [io.grpc:grpc-android:1.52.1] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/c95a58f79df4312391491f6c1dcb89a5/transformed/jetified-grpc-android-1.52.1/AndroidManifest.xml:9:5-79
+MERGED from [io.grpc:grpc-android:1.52.1] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/c95a58f79df4312391491f6c1dcb89a5/transformed/jetified-grpc-android-1.52.1/AndroidManifest.xml:9:5-79
+	android:name
+		ADDED from /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/android/app/src/main/AndroidManifest.xml:5:26-80
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/android/app/src/main/AndroidManifest.xml:6:9-85
+	android:name
+		ADDED from /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/android/app/src/main/AndroidManifest.xml:6:26-82
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/android/app/src/main/AndroidManifest.xml:7:9-84
+MERGED from [:file_picker] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-80
+MERGED from [:file_picker] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-80
+	android:name
+		ADDED from /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/android/app/src/main/AndroidManifest.xml:7:26-81
+uses-permission#android.permission.CAMERA
+ADDED from /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/android/app/src/main/AndroidManifest.xml:8:9-69
+MERGED from [:camera_android] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/camera_android/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-65
+MERGED from [:camera_android] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/camera_android/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-65
+	android:name
+		ADDED from /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/android/app/src/main/AndroidManifest.xml:8:26-66
+uses-sdk
+INJECTED from /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/android/app/src/main/AndroidManifest.xml
+INJECTED from /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/android/app/src/main/AndroidManifest.xml
+MERGED from [:esys_flutter_share_plus] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/esys_flutter_share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:esys_flutter_share_plus] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/esys_flutter_share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:cloud_firestore] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:cloud_firestore] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:firebase_core] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:firebase_core] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:flutter_pdfview] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/flutter_pdfview/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:flutter_pdfview] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/flutter_pdfview/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:nb_utils] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/nb_utils/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:nb_utils] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/nb_utils/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:file_picker] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:file_picker] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:camera_android] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/camera_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:camera_android] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/camera_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:image_picker_android] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:image_picker_android] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:flutter_plugin_android_lifecycle] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/flutter_plugin_android_lifecycle/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:flutter_plugin_android_lifecycle] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/flutter_plugin_android_lifecycle/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:sqflite] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/sqflite/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:sqflite] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/sqflite/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:path_provider_android] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/path_provider_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:path_provider_android] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/path_provider_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:connectivity_plus] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/connectivity_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:connectivity_plus] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/connectivity_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:image_cropper] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/image_cropper/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:image_cropper] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/image_cropper/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:shared_preferences_android] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/shared_preferences_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:shared_preferences_android] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/shared_preferences_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:flutter_statusbarcolor_ns] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/flutter_statusbarcolor_ns/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:flutter_statusbarcolor_ns] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/flutter_statusbarcolor_ns/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:flutter_keyboard_visibility] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/flutter_keyboard_visibility/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:flutter_keyboard_visibility] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/flutter_keyboard_visibility/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:fluttertoast] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/fluttertoast/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:fluttertoast] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/fluttertoast/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:video_player_android] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/video_player_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:video_player_android] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/video_player_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.multidex:multidex:2.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/a42b190f253fcb6b55178c6ea18082a1/transformed/multidex-2.0.0/AndroidManifest.xml:20:5-43
+MERGED from [androidx.multidex:multidex:2.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/a42b190f253fcb6b55178c6ea18082a1/transformed/multidex-2.0.0/AndroidManifest.xml:20:5-43
+MERGED from [com.github.yalantis:ucrop:2.2.8] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/4d7857c5bc5f6d520d6863d8de49ba07/transformed/jetified-ucrop-2.2.8/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.yalantis:ucrop:2.2.8] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/4d7857c5bc5f6d520d6863d8de49ba07/transformed/jetified-ucrop-2.2.8/AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.appcompat:appcompat:1.4.2] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/798ca3d8766dd71202e7a1bf4d91269a/transformed/appcompat-1.4.2/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.4.2] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/798ca3d8766dd71202e7a1bf4d91269a/transformed/appcompat-1.4.2/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0-beta01] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/ea6243c942a86bc59f4f588a556e01e7/transformed/legacy-support-v4-1.0.0-beta01/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0-beta01] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/ea6243c942a86bc59f4f588a556e01e7/transformed/legacy-support-v4-1.0.0-beta01/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-firestore:24.6.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/8c221e6f8fe94c9fa5b0461e54871fa6/transformed/jetified-firebase-firestore-24.6.0/AndroidManifest.xml:6:5-8:41
+MERGED from [com.google.firebase:firebase-firestore:24.6.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/8c221e6f8fe94c9fa5b0461e54871fa6/transformed/jetified-firebase-firestore-24.6.0/AndroidManifest.xml:6:5-8:41
+MERGED from [com.google.firebase:firebase-common:20.3.2] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/4ed067ba1f0f89a429ce10a8bfdae990/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-common:20.3.2] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/4ed067ba1f0f89a429ce10a8bfdae990/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-database-collection:18.0.1] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/a12b4d78dc7fd60bc61345803c6c2bd8/transformed/jetified-firebase-database-collection-18.0.1/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-database-collection:18.0.1] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/a12b4d78dc7fd60bc61345803c6c2bd8/transformed/jetified-firebase-database-collection-18.0.1/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/8c6d5483ed39452a5b35b2e7a26c61f1/transformed/jetified-firebase-appcheck-interop-17.0.0/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/8c6d5483ed39452a5b35b2e7a26c61f1/transformed/jetified-firebase-appcheck-interop-17.0.0/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.gms:play-services-base:18.0.1] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/b121b3b78989ee63d33a65614e3f7adb/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-base:18.0.1] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/b121b3b78989ee63d33a65614e3f7adb/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:18:5-43
+MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/0277debef067408d155f52616ad46187/transformed/jetified-firebase-auth-interop-19.0.2/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/0277debef067408d155f52616ad46187/transformed/jetified-firebase-auth-interop-19.0.2/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/452dcf75c9f46c1837c8390b3cfc1761/transformed/jetified-play-services-tasks-18.0.2/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/452dcf75c9f46c1837c8390b3cfc1761/transformed/jetified-play-services-tasks-18.0.2/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/3794f8805813d716e1232c1d56f0ad65/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/3794f8805813d716e1232c1d56f0ad65/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:18:5-43
+MERGED from [androidx.fragment:fragment:1.3.6] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/aa9c93bacb971c617b6598a795242b27/transformed/fragment-1.3.6/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.6] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/aa9c93bacb971c617b6598a795242b27/transformed/fragment-1.3.6/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.6.1] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/50647d89fd88e37c6406c26571a83ae6/transformed/jetified-activity-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.6.1] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/50647d89fd88e37c6406c26571a83ae6/transformed/jetified-activity-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0-beta01] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/c3980d4bede66213941b13d72968e233/transformed/legacy-support-core-ui-1.0.0-beta01/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0-beta01] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/c3980d4bede66213941b13d72968e233/transformed/legacy-support-core-ui-1.0.0-beta01/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0-beta01] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/92ec697cd2a0501fb96493cf00065580/transformed/legacy-support-core-utils-1.0.0-beta01/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0-beta01] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/92ec697cd2a0501fb96493cf00065580/transformed/legacy-support-core-utils-1.0.0-beta01/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/d401f0afd25f69cdbc6461146521fe05/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/d401f0afd25f69cdbc6461146521fe05/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/7184b0f7277daadef7e7f6b04d4012a5/transformed/lifecycle-viewmodel-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/7184b0f7277daadef7e7f6b04d4012a5/transformed/lifecycle-viewmodel-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/5da76385fefdc409a5576dc5fe151b37/transformed/jetified-lifecycle-viewmodel-savedstate-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/5da76385fefdc409a5576dc5fe151b37/transformed/jetified-lifecycle-viewmodel-savedstate-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.window:window-java:1.0.0-beta04] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/5f7f04b14475a5177c81c0aebd35a1c0/transformed/jetified-window-java-1.0.0-beta04/AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.window:window-java:1.0.0-beta04] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/5f7f04b14475a5177c81c0aebd35a1c0/transformed/jetified-window-java-1.0.0-beta04/AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.window:window:1.0.0-beta04] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/30c9f9e36f76ec2d5a473df3d33e33ff/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.window:window:1.0.0-beta04] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/30c9f9e36f76ec2d5a473df3d33e33ff/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:20:5-22:41
+MERGED from [com.github.mhiew:android-pdf-viewer:3.2.0-beta.3] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/5537a970aab7de17121104c2549a167e/transformed/jetified-android-pdf-viewer-3.2.0-beta.3/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.mhiew:android-pdf-viewer:3.2.0-beta.3] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/5537a970aab7de17121104c2549a167e/transformed/jetified-android-pdf-viewer-3.2.0-beta.3/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.exoplayer:exoplayer-hls:2.18.5] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/06862db426c635872387effeeb4fb095/transformed/jetified-exoplayer-hls-2.18.5/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-hls:2.18.5] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/06862db426c635872387effeeb4fb095/transformed/jetified-exoplayer-hls-2.18.5/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-dash:2.18.5] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/c193c1446d6754c1ac1548564cbe0a53/transformed/jetified-exoplayer-dash-2.18.5/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-dash:2.18.5] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/c193c1446d6754c1ac1548564cbe0a53/transformed/jetified-exoplayer-dash-2.18.5/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.18.5] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/518d41c3e849144d9970f2d91bcaaf86/transformed/jetified-exoplayer-smoothstreaming-2.18.5/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.18.5] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/518d41c3e849144d9970f2d91bcaaf86/transformed/jetified-exoplayer-smoothstreaming-2.18.5/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.18.5] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/c3355569f9522d6c716994335cfc544f/transformed/jetified-exoplayer-core-2.18.5/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.18.5] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/c3355569f9522d6c716994335cfc544f/transformed/jetified-exoplayer-core-2.18.5/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.media:media:1.0.0-beta01] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/eb8271bc910e9fa134369772253ef33f/transformed/media-1.0.0-beta01/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0-beta01] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/eb8271bc910e9fa134369772253ef33f/transformed/media-1.0.0-beta01/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.4.2] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/8df05fd50cb56f937d4fc2ffd4303c98/transformed/jetified-appcompat-resources-1.4.2/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.4.2] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/8df05fd50cb56f937d4fc2ffd4303c98/transformed/jetified-appcompat-resources-1.4.2/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/06be450459b46321496021199dd5ad57/transformed/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/06be450459b46321496021199dd5ad57/transformed/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/c77a6767f32c21999e0f1db5d45a62dd/transformed/jetified-emoji2-views-helper-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.emoji2:emoji2-views-helper:1.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/c77a6767f32c21999e0f1db5d45a62dd/transformed/jetified-emoji2-views-helper-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.emoji2:emoji2:1.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/80dd5bf4a75f42de0f8e68bad5404641/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.emoji2:emoji2:1.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/80dd5bf4a75f42de0f8e68bad5404641/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.transition:transition:1.4.1] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/7a4436c2eed48b4436a3442c2ff30468/transformed/transition-1.4.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.4.1] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/7a4436c2eed48b4436a3442c2ff30468/transformed/transition-1.4.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0-beta01] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/40c3690db9d4ea94316edb6656612a67/transformed/coordinatorlayout-1.0.0-beta01/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0-beta01] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/40c3690db9d4ea94316edb6656612a67/transformed/coordinatorlayout-1.0.0-beta01/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0-beta01] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/de743e3d1fb9719e07f3fc6096f4ef79/transformed/slidingpanelayout-1.0.0-beta01/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0-beta01] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/de743e3d1fb9719e07f3fc6096f4ef79/transformed/slidingpanelayout-1.0.0-beta01/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0-beta01] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/ab2811db345d38056480b8c04c73aa79/transformed/swiperefreshlayout-1.0.0-beta01/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0-beta01] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/ab2811db345d38056480b8c04c73aa79/transformed/swiperefreshlayout-1.0.0-beta01/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0-beta01] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/01641d303b6302f70cd7eac2f34cf3e3/transformed/asynclayoutinflater-1.0.0-beta01/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0-beta01] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/01641d303b6302f70cd7eac2f34cf3e3/transformed/asynclayoutinflater-1.0.0-beta01/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/ee2b9ab1f1c40582c045cd909c640590/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/ee2b9ab1f1c40582c045cd909c640590/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/0f7090bb1c901a5eef83eb957c740e78/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/0f7090bb1c901a5eef83eb957c740e78/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/87784eb0dfe09c8e2b1282bc3f1e0570/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/87784eb0dfe09c8e2b1282bc3f1e0570/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/53c684651fc0a1d0d023d20a1835d031/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/53c684651fc0a1d0d023d20a1835d031/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core-ktx:1.9.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/8c31325a10f05b1b0bc6756758cc1a60/transformed/jetified-core-ktx-1.9.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.9.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/8c31325a10f05b1b0bc6756758cc1a60/transformed/jetified-core-ktx-1.9.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core:1.9.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/7001a38355e8d7c4e616e2867b2af33b/transformed/core-1.9.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.9.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/7001a38355e8d7c4e616e2867b2af33b/transformed/core-1.9.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.3.6] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/521e570cc145af3267b1defcb403065d/transformed/exifinterface-1.3.6/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.6] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/521e570cc145af3267b1defcb403065d/transformed/exifinterface-1.3.6/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/0bfe380b08b1e13327d8e12187576d5b/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/0bfe380b08b1e13327d8e12187576d5b/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/b2e16791d24d74ea89e5ecdee617d321/transformed/jetified-startup-runtime-1.0.0/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/b2e16791d24d74ea89e5ecdee617d321/transformed/jetified-startup-runtime-1.0.0/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/9be0c9b54cbfdf64fd75e017909965b4/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/9be0c9b54cbfdf64fd75e017909965b4/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/d051f688b983c2a4e23be15260087246/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/d051f688b983c2a4e23be15260087246/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/42eac6b9d57bafd2f3ce2b9ae42613bd/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/42eac6b9d57bafd2f3ce2b9ae42613bd/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/009c99516b19854d172865adc8513053/transformed/lifecycle-runtime-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/009c99516b19854d172865adc8513053/transformed/lifecycle-runtime-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.2.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/76139bbe915670c0795cc1dac7ff1c01/transformed/jetified-savedstate-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.2.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/76139bbe915670c0795cc1dac7ff1c01/transformed/jetified-savedstate-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-datasource:2.18.5] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/b44cdfc0b199ceaf942166b6b6775c56/transformed/jetified-exoplayer-datasource-2.18.5/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-datasource:2.18.5] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/b44cdfc0b199ceaf942166b6b6775c56/transformed/jetified-exoplayer-datasource-2.18.5/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-extractor:2.18.5] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/890ff937fe9e1edda61540d00c01aab7/transformed/jetified-exoplayer-extractor-2.18.5/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-extractor:2.18.5] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/890ff937fe9e1edda61540d00c01aab7/transformed/jetified-exoplayer-extractor-2.18.5/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-decoder:2.18.5] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/9ac5569735acd4ac583c29c2f4e50ba1/transformed/jetified-exoplayer-decoder-2.18.5/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-decoder:2.18.5] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/9ac5569735acd4ac583c29c2f4e50ba1/transformed/jetified-exoplayer-decoder-2.18.5/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-database:2.18.5] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/6eaf3fe7270ddc107e39996da16f82fc/transformed/jetified-exoplayer-database-2.18.5/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-database:2.18.5] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/6eaf3fe7270ddc107e39996da16f82fc/transformed/jetified-exoplayer-database-2.18.5/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-common:2.18.5] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/51aa59fb95afabea52e33080bfc18e07/transformed/jetified-exoplayer-common-2.18.5/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-common:2.18.5] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/51aa59fb95afabea52e33080bfc18e07/transformed/jetified-exoplayer-common-2.18.5/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.documentfile:documentfile:1.0.0-beta01] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/dbd50dd46d0b3c25cc7454aa0f5f5b9a/transformed/documentfile-1.0.0-beta01/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0-beta01] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/dbd50dd46d0b3c25cc7454aa0f5f5b9a/transformed/documentfile-1.0.0-beta01/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0-beta01] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/274fcb529e428a6ac3428247865ba82c/transformed/localbroadcastmanager-1.0.0-beta01/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0-beta01] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/274fcb529e428a6ac3428247865ba82c/transformed/localbroadcastmanager-1.0.0-beta01/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0-beta01] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/5b0b870e15c9f63a2f4501855c9a7318/transformed/print-1.0.0-beta01/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0-beta01] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/5b0b870e15c9f63a2f4501855c9a7318/transformed/print-1.0.0-beta01/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-components:17.1.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/f6319cb97734e64285d3e7ca998d32b1/transformed/jetified-firebase-components-17.1.0/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.firebase:firebase-components:17.1.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/f6319cb97734e64285d3e7ca998d32b1/transformed/jetified-firebase-components-17.1.0/AndroidManifest.xml:18:5-20:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/cbb56f646a99c729e86f9d9894a77976/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/cbb56f646a99c729e86f9d9894a77976/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/07658b4ab0772e1f50646dd1e3b2a065/transformed/lifecycle-livedata-core-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/07658b4ab0772e1f50646dd1e3b2a065/transformed/lifecycle-livedata-core-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/fac1dcc8f45b013d55ffca72b5e78353/transformed/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/fac1dcc8f45b013d55ffca72b5e78353/transformed/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/fbbb5f87ccc60943a50278ed5357805b/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/fbbb5f87ccc60943a50278ed5357805b/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/9553e73ac8992516b9e1aada05a60e32/transformed/jetified-annotation-experimental-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/9553e73ac8992516b9e1aada05a60e32/transformed/jetified-annotation-experimental-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [com.github.mhiew:pdfium-android:1.9.2] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/baf0ab76bcf6da60ad22e1154f2a17f9/transformed/jetified-pdfium-android-1.9.2/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.mhiew:pdfium-android:1.9.2] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/baf0ab76bcf6da60ad22e1154f2a17f9/transformed/jetified-pdfium-android-1.9.2/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/76ff9de4fed6b4fe4dc131349478467f/transformed/jetified-protolite-well-known-types-18.0.0/AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/76ff9de4fed6b4fe4dc131349478467f/transformed/jetified-protolite-well-known-types-18.0.0/AndroidManifest.xml:7:5-9:41
+MERGED from [io.grpc:grpc-android:1.52.1] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/c95a58f79df4312391491f6c1dcb89a5/transformed/jetified-grpc-android-1.52.1/AndroidManifest.xml:5:5-7:41
+MERGED from [io.grpc:grpc-android:1.52.1] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/c95a58f79df4312391491f6c1dcb89a5/transformed/jetified-grpc-android-1.52.1/AndroidManifest.xml:5:5-7:41
+INJECTED from /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/android/app/src/debug/AndroidManifest.xml
+INJECTED from /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/android/app/src/debug/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/android/app/src/debug/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/android/app/src/debug/AndroidManifest.xml
+provider#de.esys.esysfluttershare.EsysFlutterShareFileProvider
+ADDED from [:esys_flutter_share_plus] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/esys_flutter_share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-18:20
+	android:grantUriPermissions
+		ADDED from [:esys_flutter_share_plus] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/esys_flutter_share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-47
+	android:authorities
+		ADDED from [:esys_flutter_share_plus] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/esys_flutter_share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-110
+	android:exported
+		ADDED from [:esys_flutter_share_plus] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/esys_flutter_share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-37
+	android:name
+		ADDED from [:esys_flutter_share_plus] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/esys_flutter_share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-81
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from [:esys_flutter_share_plus] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/esys_flutter_share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-17:72
+	android:resource
+		ADDED from [:esys_flutter_share_plus] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/esys_flutter_share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:17:17-69
+	android:name
+		ADDED from [:esys_flutter_share_plus] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/esys_flutter_share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:16:17-67
+service#com.google.firebase.components.ComponentDiscoveryService
+ADDED from [:cloud_firestore] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-14:19
+MERGED from [:firebase_core] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-14:19
+MERGED from [:firebase_core] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-14:19
+MERGED from [com.google.firebase:firebase-firestore:24.6.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/8c221e6f8fe94c9fa5b0461e54871fa6/transformed/jetified-firebase-firestore-24.6.0/AndroidManifest.xml:16:9-22:19
+MERGED from [com.google.firebase:firebase-firestore:24.6.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/8c221e6f8fe94c9fa5b0461e54871fa6/transformed/jetified-firebase-firestore-24.6.0/AndroidManifest.xml:16:9-22:19
+MERGED from [com.google.firebase:firebase-common:20.3.2] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/4ed067ba1f0f89a429ce10a8bfdae990/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:32:9-36:35
+MERGED from [com.google.firebase:firebase-common:20.3.2] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/4ed067ba1f0f89a429ce10a8bfdae990/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:32:9-36:35
+	android:exported
+		ADDED from [com.google.firebase:firebase-firestore:24.6.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/8c221e6f8fe94c9fa5b0461e54871fa6/transformed/jetified-firebase-firestore-24.6.0/AndroidManifest.xml:18:13-37
+	tools:targetApi
+		ADDED from [com.google.firebase:firebase-common:20.3.2] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/4ed067ba1f0f89a429ce10a8bfdae990/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:36:13-32
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:20.3.2] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/4ed067ba1f0f89a429ce10a8bfdae990/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:34:13-43
+	android:name
+		ADDED from [:cloud_firestore] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:10:18-89
+meta-data#com.google.firebase.components:io.flutter.plugins.firebase.firestore.FlutterFirebaseFirestoreRegistrar
+ADDED from [:cloud_firestore] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
+	android:value
+		ADDED from [:cloud_firestore] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
+	android:name
+		ADDED from [:cloud_firestore] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-134
+meta-data#com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar
+ADDED from [:firebase_core] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
+	android:value
+		ADDED from [:firebase_core] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
+	android:name
+		ADDED from [:firebase_core] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-124
+queries
+ADDED from [:file_picker] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:11:5-17:15
+intent#action:name:android.intent.action.GET_CONTENT+data:mimeType:*/*
+ADDED from [:file_picker] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:12:9-16:18
+action#android.intent.action.GET_CONTENT
+ADDED from [:file_picker] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-72
+	android:name
+		ADDED from [:file_picker] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:13:21-69
+data
+ADDED from [:file_picker] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-44
+	android:mimeType
+		ADDED from [:file_picker] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:15:19-41
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from [:camera_android] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/camera_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-71
+	android:name
+		ADDED from [:camera_android] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/camera_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:22-68
+provider#io.flutter.plugins.imagepicker.ImagePickerFileProvider
+ADDED from [:image_picker_android] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-18:20
+	android:grantUriPermissions
+		ADDED from [:image_picker_android] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-47
+	android:authorities
+		ADDED from [:image_picker_android] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-74
+	android:exported
+		ADDED from [:image_picker_android] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-37
+	android:name
+		ADDED from [:image_picker_android] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-82
+meta-data#com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar
+ADDED from [com.google.firebase:firebase-firestore:24.6.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/8c221e6f8fe94c9fa5b0461e54871fa6/transformed/jetified-firebase-firestore-24.6.0/AndroidManifest.xml:19:13-21:85
+	android:value
+		ADDED from [com.google.firebase:firebase-firestore:24.6.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/8c221e6f8fe94c9fa5b0461e54871fa6/transformed/jetified-firebase-firestore-24.6.0/AndroidManifest.xml:21:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-firestore:24.6.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/8c221e6f8fe94c9fa5b0461e54871fa6/transformed/jetified-firebase-firestore-24.6.0/AndroidManifest.xml:20:17-111
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:20.3.2] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/4ed067ba1f0f89a429ce10a8bfdae990/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:25:9-30:39
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:20.3.2] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/4ed067ba1f0f89a429ce10a8bfdae990/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:27:13-72
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:20.3.2] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/4ed067ba1f0f89a429ce10a8bfdae990/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:29:13-37
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:20.3.2] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/4ed067ba1f0f89a429ce10a8bfdae990/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:28:13-43
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:20.3.2] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/4ed067ba1f0f89a429ce10a8bfdae990/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:30:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-common:20.3.2] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/4ed067ba1f0f89a429ce10a8bfdae990/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:26:13-77
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:18.0.1] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/b121b3b78989ee63d33a65614e3f7adb/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:18.0.1] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/b121b3b78989ee63d33a65614e3f7adb/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:22:19-43
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:18.0.1] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/b121b3b78989ee63d33a65614e3f7adb/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:21:19-78
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:18.0.1] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/b121b3b78989ee63d33a65614e3f7adb/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:19-85
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:18.1.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/3794f8805813d716e1232c1d56f0ad65/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:18.1.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/3794f8805813d716e1232c1d56f0ad65/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:23:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:18.1.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/3794f8805813d716e1232c1d56f0ad65/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:22:13-58
+uses-library#androidx.window.extensions
+ADDED from [androidx.window:window:1.0.0-beta04] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/30c9f9e36f76ec2d5a473df3d33e33ff/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
+	android:required
+		ADDED from [androidx.window:window:1.0.0-beta04] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/30c9f9e36f76ec2d5a473df3d33e33ff/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.window:window:1.0.0-beta04] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/30c9f9e36f76ec2d5a473df3d33e33ff/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
+uses-library#androidx.window.sidecar
+ADDED from [androidx.window:window:1.0.0-beta04] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/30c9f9e36f76ec2d5a473df3d33e33ff/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
+	android:required
+		ADDED from [androidx.window:window:1.0.0-beta04] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/30c9f9e36f76ec2d5a473df3d33e33ff/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
+	android:name
+		ADDED from [androidx.window:window:1.0.0-beta04] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/30c9f9e36f76ec2d5a473df3d33e33ff/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/80dd5bf4a75f42de0f8e68bad5404641/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/0bfe380b08b1e13327d8e12187576d5b/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/0bfe380b08b1e13327d8e12187576d5b/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.startup:startup-runtime:1.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/b2e16791d24d74ea89e5ecdee617d321/transformed/jetified-startup-runtime-1.0.0/AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/b2e16791d24d74ea89e5ecdee617d321/transformed/jetified-startup-runtime-1.0.0/AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/80dd5bf4a75f42de0f8e68bad5404641/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:30:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/80dd5bf4a75f42de0f8e68bad5404641/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:28:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/80dd5bf4a75f42de0f8e68bad5404641/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:29:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/80dd5bf4a75f42de0f8e68bad5404641/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:27:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/80dd5bf4a75f42de0f8e68bad5404641/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/80dd5bf4a75f42de0f8e68bad5404641/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:33:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/80dd5bf4a75f42de0f8e68bad5404641/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:32:17-75
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/7001a38355e8d7c4e616e2867b2af33b/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.9.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/7001a38355e8d7c4e616e2867b2af33b/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.9.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/7001a38355e8d7c4e616e2867b2af33b/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+permission#tech.mantledmobile.user.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/7001a38355e8d7c4e616e2867b2af33b/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.9.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/7001a38355e8d7c4e616e2867b2af33b/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.9.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/7001a38355e8d7c4e616e2867b2af33b/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/7001a38355e8d7c4e616e2867b2af33b/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.9.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/7001a38355e8d7c4e616e2867b2af33b/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+uses-permission#tech.mantledmobile.user.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/7001a38355e8d7c4e616e2867b2af33b/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.9.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/7001a38355e8d7c4e616e2867b2af33b/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.4.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/0bfe380b08b1e13327d8e12187576d5b/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.4.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/0bfe380b08b1e13327d8e12187576d5b/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.4.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/0bfe380b08b1e13327d8e12187576d5b/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78

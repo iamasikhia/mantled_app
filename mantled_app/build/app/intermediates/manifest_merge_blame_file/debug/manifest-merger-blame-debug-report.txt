@@ -1,0 +1,240 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="tech.mantledmobile.user"
+4    android:versionCode="8"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="34" />
+10    <!--
+11         The INTERNET permission is required for development. Specifically,
+12         the Flutter tool needs it to communicate with the running application
+13         to allow setting breakpoints, to provide hot reload, etc.
+14    -->
+15    <uses-permission android:name="android.permission.INTERNET" />
+15-->/Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/android/app/src/main/AndroidManifest.xml:4:9-71
+15-->/Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/android/app/src/main/AndroidManifest.xml:4:26-68
+16    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+16-->/Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/android/app/src/main/AndroidManifest.xml:5:9-83
+16-->/Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/android/app/src/main/AndroidManifest.xml:5:26-80
+17    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+17-->/Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/android/app/src/main/AndroidManifest.xml:6:9-85
+17-->/Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/android/app/src/main/AndroidManifest.xml:6:26-82
+18    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+18-->/Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/android/app/src/main/AndroidManifest.xml:7:9-84
+18-->/Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/android/app/src/main/AndroidManifest.xml:7:26-81
+19    <uses-permission android:name="android.permission.CAMERA" />
+19-->/Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/android/app/src/main/AndroidManifest.xml:8:9-69
+19-->/Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/android/app/src/main/AndroidManifest.xml:8:26-66
+20
+21    <queries>
+21-->[:file_picker] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:11:5-17:15
+22        <intent>
+22-->[:file_picker] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:12:9-16:18
+23            <action android:name="android.intent.action.GET_CONTENT" />
+23-->[:file_picker] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-72
+23-->[:file_picker] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:13:21-69
+24
+25            <data android:mimeType="*/*" />
+25-->[:file_picker] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-44
+25-->[:file_picker] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:15:19-41
+26        </intent>
+27    </queries>
+28
+29    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+29-->[:camera_android] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/camera_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-71
+29-->[:camera_android] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/camera_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:22-68
+30
+31    <permission
+31-->[androidx.core:core:1.9.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/7001a38355e8d7c4e616e2867b2af33b/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+32        android:name="tech.mantledmobile.user.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+32-->[androidx.core:core:1.9.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/7001a38355e8d7c4e616e2867b2af33b/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+33        android:protectionLevel="signature" />
+33-->[androidx.core:core:1.9.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/7001a38355e8d7c4e616e2867b2af33b/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+34
+35    <uses-permission android:name="tech.mantledmobile.user.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+35-->[androidx.core:core:1.9.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/7001a38355e8d7c4e616e2867b2af33b/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
+35-->[androidx.core:core:1.9.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/7001a38355e8d7c4e616e2867b2af33b/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+36
+37    <application
+38        android:name="android.app.Application"
+39        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+39-->[androidx.core:core:1.9.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/7001a38355e8d7c4e616e2867b2af33b/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
+40        android:debuggable="true"
+41        android:icon="@mipmap/ic_launcher"
+42        android:label="Mantled" >
+43        <meta-data
+44            android:name="com.google.firebase.messaging.default_notification_icon"
+45            android:resource="@drawable/ic_launcher" />
+46
+47        <activity android:name="com.smileid.smileidui.SIDIDCaptureActivity" />
+48        <activity android:name="com.smileid.smileidui.SIDSelfieCaptureActivity" />
+49        <activity android:name="com.smileid.smileidui.SIDReviewActivity" />
+50        <activity
+51            android:name="tech.mantledmobile.user.MainActivity"
+52            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+53            android:exported="true"
+54            android:hardwareAccelerated="true"
+55            android:launchMode="singleTop"
+56            android:theme="@style/LaunchTheme"
+57            android:windowSoftInputMode="adjustResize" >
+58
+59            <!--
+60                 Specifies an Android theme to apply to this Activity as soon as
+61                 the Android process has started. This theme is visible to the user
+62                 while the Flutter UI initializes. After that, this theme continues
+63                 to determine the Window background behind the Flutter UI.
+64            -->
+65
+66            <meta-data
+67                android:name="io.flutter.embedding.android.NormalTheme"
+68                android:resource="@style/NormalTheme" />
+69
+70            <intent-filter>
+71                <action android:name="android.intent.action.MAIN" />
+72
+73                <category android:name="android.intent.category.LAUNCHER" />
+74            </intent-filter>
+75        </activity>
+76        <activity
+77            android:name="com.yalantis.ucrop.UCropActivity"
+78            android:screenOrientation="portrait"
+79            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+80        <!--
+81             Don't delete the meta-data below.
+82             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+83        -->
+84        <meta-data
+85            android:name="flutterEmbedding"
+86            android:value="2" />
+87
+88        <provider
+88-->[:esys_flutter_share_plus] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/esys_flutter_share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-18:20
+89            android:name="de.esys.esysfluttershare.EsysFlutterShareFileProvider"
+89-->[:esys_flutter_share_plus] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/esys_flutter_share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-81
+90            android:authorities="tech.mantledmobile.user.fileprovider.github.com/orgs/esysberlin/esys-flutter-share"
+90-->[:esys_flutter_share_plus] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/esys_flutter_share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-110
+91            android:exported="false"
+91-->[:esys_flutter_share_plus] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/esys_flutter_share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-37
+92            android:grantUriPermissions="true" >
+92-->[:esys_flutter_share_plus] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/esys_flutter_share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-47
+93            <meta-data
+93-->[:esys_flutter_share_plus] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/esys_flutter_share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-17:72
+94                android:name="android.support.FILE_PROVIDER_PATHS"
+94-->[:esys_flutter_share_plus] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/esys_flutter_share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:16:17-67
+95                android:resource="@xml/esys_flutter_share_filepaths" />
+95-->[:esys_flutter_share_plus] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/esys_flutter_share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:17:17-69
+96        </provider>
+97
+98        <service
+98-->[:cloud_firestore] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-14:19
+99            android:name="com.google.firebase.components.ComponentDiscoveryService"
+99-->[:cloud_firestore] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:10:18-89
+100            android:directBootAware="true"
+100-->[com.google.firebase:firebase-common:20.3.2] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/4ed067ba1f0f89a429ce10a8bfdae990/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:34:13-43
+101            android:exported="false" >
+101-->[com.google.firebase:firebase-firestore:24.6.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/8c221e6f8fe94c9fa5b0461e54871fa6/transformed/jetified-firebase-firestore-24.6.0/AndroidManifest.xml:18:13-37
+102            <meta-data
+102-->[:cloud_firestore] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
+103                android:name="com.google.firebase.components:io.flutter.plugins.firebase.firestore.FlutterFirebaseFirestoreRegistrar"
+103-->[:cloud_firestore] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-134
+104                android:value="com.google.firebase.components.ComponentRegistrar" />
+104-->[:cloud_firestore] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
+105            <meta-data
+105-->[:firebase_core] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
+106                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
+106-->[:firebase_core] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-124
+107                android:value="com.google.firebase.components.ComponentRegistrar" />
+107-->[:firebase_core] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
+108            <meta-data
+108-->[com.google.firebase:firebase-firestore:24.6.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/8c221e6f8fe94c9fa5b0461e54871fa6/transformed/jetified-firebase-firestore-24.6.0/AndroidManifest.xml:19:13-21:85
+109                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+109-->[com.google.firebase:firebase-firestore:24.6.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/8c221e6f8fe94c9fa5b0461e54871fa6/transformed/jetified-firebase-firestore-24.6.0/AndroidManifest.xml:20:17-111
+110                android:value="com.google.firebase.components.ComponentRegistrar" />
+110-->[com.google.firebase:firebase-firestore:24.6.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/8c221e6f8fe94c9fa5b0461e54871fa6/transformed/jetified-firebase-firestore-24.6.0/AndroidManifest.xml:21:17-82
+111        </service>
+112
+113        <provider
+113-->[:image_picker_android] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-18:20
+114            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
+114-->[:image_picker_android] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-82
+115            android:authorities="tech.mantledmobile.user.flutter.image_provider"
+115-->[:image_picker_android] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-74
+116            android:exported="false"
+116-->[:image_picker_android] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-37
+117            android:grantUriPermissions="true" >
+117-->[:image_picker_android] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-47
+118            <meta-data
+118-->[:esys_flutter_share_plus] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/esys_flutter_share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-17:72
+119                android:name="android.support.FILE_PROVIDER_PATHS"
+119-->[:esys_flutter_share_plus] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/esys_flutter_share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:16:17-67
+120                android:resource="@xml/flutter_image_picker_file_paths" />
+120-->[:esys_flutter_share_plus] /Users/iseoluwaasikhia/StudioProjects/mantled_app/mantled_app/mantled_app/build/esys_flutter_share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:17:17-69
+121        </provider>
+122        <provider
+122-->[com.google.firebase:firebase-common:20.3.2] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/4ed067ba1f0f89a429ce10a8bfdae990/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:25:9-30:39
+123            android:name="com.google.firebase.provider.FirebaseInitProvider"
+123-->[com.google.firebase:firebase-common:20.3.2] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/4ed067ba1f0f89a429ce10a8bfdae990/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:26:13-77
+124            android:authorities="tech.mantledmobile.user.firebaseinitprovider"
+124-->[com.google.firebase:firebase-common:20.3.2] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/4ed067ba1f0f89a429ce10a8bfdae990/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:27:13-72
+125            android:directBootAware="true"
+125-->[com.google.firebase:firebase-common:20.3.2] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/4ed067ba1f0f89a429ce10a8bfdae990/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:28:13-43
+126            android:exported="false"
+126-->[com.google.firebase:firebase-common:20.3.2] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/4ed067ba1f0f89a429ce10a8bfdae990/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:29:13-37
+127            android:initOrder="100" />
+127-->[com.google.firebase:firebase-common:20.3.2] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/4ed067ba1f0f89a429ce10a8bfdae990/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:30:13-36
+128
+129        <activity
+129-->[com.google.android.gms:play-services-base:18.0.1] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/b121b3b78989ee63d33a65614e3f7adb/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
+130            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+130-->[com.google.android.gms:play-services-base:18.0.1] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/b121b3b78989ee63d33a65614e3f7adb/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:19-85
+131            android:exported="false"
+131-->[com.google.android.gms:play-services-base:18.0.1] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/b121b3b78989ee63d33a65614e3f7adb/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:22:19-43
+132            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+132-->[com.google.android.gms:play-services-base:18.0.1] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/b121b3b78989ee63d33a65614e3f7adb/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:21:19-78
+133
+134        <meta-data
+134-->[com.google.android.gms:play-services-basement:18.1.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/3794f8805813d716e1232c1d56f0ad65/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
+135            android:name="com.google.android.gms.version"
+135-->[com.google.android.gms:play-services-basement:18.1.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/3794f8805813d716e1232c1d56f0ad65/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:22:13-58
+136            android:value="@integer/google_play_services_version" />
+136-->[com.google.android.gms:play-services-basement:18.1.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/3794f8805813d716e1232c1d56f0ad65/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:23:13-66
+137
+138        <uses-library
+138-->[androidx.window:window:1.0.0-beta04] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/30c9f9e36f76ec2d5a473df3d33e33ff/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
+139            android:name="androidx.window.extensions"
+139-->[androidx.window:window:1.0.0-beta04] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/30c9f9e36f76ec2d5a473df3d33e33ff/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
+140            android:required="false" />
+140-->[androidx.window:window:1.0.0-beta04] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/30c9f9e36f76ec2d5a473df3d33e33ff/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
+141        <uses-library
+141-->[androidx.window:window:1.0.0-beta04] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/30c9f9e36f76ec2d5a473df3d33e33ff/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
+142            android:name="androidx.window.sidecar"
+142-->[androidx.window:window:1.0.0-beta04] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/30c9f9e36f76ec2d5a473df3d33e33ff/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
+143            android:required="false" />
+143-->[androidx.window:window:1.0.0-beta04] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/30c9f9e36f76ec2d5a473df3d33e33ff/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
+144
+145        <provider
+145-->[androidx.emoji2:emoji2:1.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/80dd5bf4a75f42de0f8e68bad5404641/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
+146            android:name="androidx.startup.InitializationProvider"
+146-->[androidx.emoji2:emoji2:1.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/80dd5bf4a75f42de0f8e68bad5404641/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:27:13-67
+147            android:authorities="tech.mantledmobile.user.androidx-startup"
+147-->[androidx.emoji2:emoji2:1.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/80dd5bf4a75f42de0f8e68bad5404641/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:28:13-68
+148            android:exported="false" >
+148-->[androidx.emoji2:emoji2:1.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/80dd5bf4a75f42de0f8e68bad5404641/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:29:13-37
+149            <meta-data
+149-->[androidx.emoji2:emoji2:1.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/80dd5bf4a75f42de0f8e68bad5404641/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
+150                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+150-->[androidx.emoji2:emoji2:1.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/80dd5bf4a75f42de0f8e68bad5404641/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:32:17-75
+151                android:value="androidx.startup" />
+151-->[androidx.emoji2:emoji2:1.0.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/80dd5bf4a75f42de0f8e68bad5404641/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:33:17-49
+152            <meta-data
+152-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/0bfe380b08b1e13327d8e12187576d5b/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
+153                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+153-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/0bfe380b08b1e13327d8e12187576d5b/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
+154                android:value="androidx.startup" />
+154-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/iseoluwaasikhia/.gradle/caches/transforms-3/0bfe380b08b1e13327d8e12187576d5b/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
+155        </provider>
+156    </application>
+157
+158</manifest>
